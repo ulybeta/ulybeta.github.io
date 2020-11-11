@@ -1,0 +1,15 @@
+body {
+    background: center center repeat;
+    background-image: linear-gradient(#B027E2, #1E798E);
+    margin: auto;
+    padding: 60px;
+  }
+  #wrap {
+    width: 60%;
+    margin: auto;
+    background: #fff;
+    overflow: hidden;
+    padding: 35px;
+    
+  }
+  

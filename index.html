@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="home.css">
+    </head>
+  <body>
+    <button onClick="login()">I know I look very 2003, but click me</button>
+  </body>
+<script>
+function login(){
+let password = prompt('Please enter your password', '');
+if(password === "1234"){
+  window.open('./home.html');
+} else {
+  history.go(-1);
+}
+}
+</script>
+</html>

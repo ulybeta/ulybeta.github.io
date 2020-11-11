@@ -4,3 +4,7 @@ body {
     margin: auto;
     padding: 60px;
   }
+
+  button {
+    font-size: large;
+  }

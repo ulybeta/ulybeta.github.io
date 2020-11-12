@@ -16,4 +16,8 @@ body {
   .resp-container {
    text-align: center;
 }
-  
+
+button{
+  margin: 0 auto;
+  display: block;
+}

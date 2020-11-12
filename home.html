@@ -19,7 +19,7 @@
         <br>You were sitting on your couch in front of me and it was dark and you were wearing blue. You were being open and honest about your past. You were telling me about your time in New York, and what was going on in your body and mind during those months. I think you said something like 'I almost died'. I was full of fear because I was not remotely ready to be a listener and recipient of that. The darkness helped me hide away. I was not deserving of the vulnerability you were showing.
         <br>
         <br>
-        I know time has passed. I know you don't care. I know you don't need my explanations nor my apologies. I know you probably don't even remember. I know you don't need any of this. 
+        I know time has passed, and you probably don't even remember. I know you don't care. I know you don't need my explanations nor my apologies. I know you don't need any of this. Yet I've been needing to tell you.
         <br>
         <br>
         I think about all the other topics I was not ready to discuss with you and receive from you and share with you and I missed out on. And now I ache to know. I'd love to sit there hearing you dissect your dreams and your past, listen to you jumping from the most heartbreaking revelation to a sarcastic joke with your typical nonchalance. You'd mix yourself with art and pop culture references and silences, and your eyes would communicate as much as your words. Your smile would hold minuscule cracks whenever you'd tell of your fears - but they'd be almost impossible to notice without paying attention. Your movements narrating a story would blend into a playlist. You are a dance. Your laugh. Your voice. Your laugh. Your voice again. Drawing patterns on the palm of your hand. Your gentle eyes. 
@@ -37,13 +37,13 @@
         Your presence opens my mind in ways that I am never able to anticipate - your brain drives that. I find exciting trying to catch up. I'd love to watch your mind navigate the. To be the place you bleed. To hold your joys and fears and arms and pains.
         <br>
         <br>
-        I don't believe in bad timing. I think it is about growth. I was raw and lost. I was not able to express and communicate what was happening inside me. I refrain from contemplating the desire of changing the past. But I wish I could rephrase my words while it was happening.
+        I don't believe in bad timing. I think it is all about growth. I was raw and lost. I was not able to express and communicate what was happening inside me. I refrain from contemplating the desire of changing the past. But I wish I could rephrase my words while it was happening.
         <br>
         <br>
         I've been thriving with ambiguity all my life, a form of escapism, as well a satisfaction of old patterns wired in the back of my brain. But I want to give intention and clarity to you. I'm asking you if there is even a remote little chance you are interested in letting me know you. I'm asking you if there is even a remote little chance you are interested in listening and seeing what I have to share. I don't know if I deserve to be the recipient of all the aspects of you. But I have the interest and the intention to be there for it. I don't know if what I have to offer is good enough, interesting enough, challenging enough for you. But I have the courage and the earnestness to try.
         <br>
         <br>
-        There are 8,189.70 km between our bodies. There are 498 and counting days of your life I was not part of since the last time I saw your face. I am aware of the multitude of distances separating my reality from yours, both physical and not. I am aware there are people, circumstances, events, considerations, thoughts in your mind and life that I cannot address. So I am perhaps sounding naive, out of place, unrequested...  yet I need to tell you:
+        There are 8,189.70 km between our bodies. There are 498 and counting days of your life I was not part of since the last time I saw your face. I am aware of the multitude of distances separating my reality from yours, both physical and not. I am aware there are people, circumstances, events, considerations, thoughts in your mind and life that I cannot address. So I will sound naive and out place...  yet I need to tell you:
         <br>
         <br>
         I've grown. I'm here. I'm open.
@@ -51,8 +51,60 @@
         <br> 
 </div>
 
+<button type="button" onclick="display_random_image();">Deflect this whole thing with a joke</button>
+
     </p>
 
 </body>
+
+<script>
+function display_random_image() 
+{
+     var theImages = [{
+        src: "https://iwouldhavesentyoualetterbutthepostwouldnotship.it/meme1.png",
+        width: "240",
+        height: "160"
+    }, {
+        src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+        width: "320",
+        height: "195"
+    }, {
+        src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+        width: "500",
+        height: "343"
+    }];
+    
+    var preBuffer = [];
+    for (var i = 0, j = theImages.length; i < j; i++) {
+        preBuffer[i] = new Image();
+        preBuffer[i].src = theImages[i].src;
+        preBuffer[i].width = theImages[i].width;
+        preBuffer[i].height = theImages[i].height;
+    }
+   
+// create random image number
+  function getRandomInt(min,max) 
+    {
+      //  return Math.floor(Math.random() * (max - min + 1)) + min;
+    
+imn = Math.floor(Math.random() * (max - min + 1)) + min;
+    return preBuffer[imn];
+    }  
+
+// 0 is first image,   preBuffer.length - 1) is  last image
+  
+var newImage = getRandomInt(0, preBuffer.length - 1);
+ 
+// remove the previous images
+var images = document.getElementsByTagName('img');
+var l = images.length;
+for (var p = 0; p < l; p++) {
+    images[0].parentNode.removeChild(images[0]);
+}
+// display the image  
+document.body.appendChild(newImage);
+}
+
+</script>
 
 </html>
